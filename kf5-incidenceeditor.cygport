@@ -1,0 +1,24 @@
+inherit kf5
+
+NAME="kf5-incidenceeditor"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE PIM event editor library"
+
+PKG_NAMES="libKF5IncidenceEditor5 libKF5IncidenceEditor-devel"
+libKF5IncidenceEditor5_CONTENTS="
+	etc/xdg/incidenceeditor.*categories
+	usr/bin/cygKF5IncidenceEditor-5.dll
+	usr/bin/kincidenceeditor.exe
+	usr/share/doc/${NAME}
+	usr/share/locale/*/LC_MESSAGES/libincidenceeditors.mo
+"
+libKF5IncidenceEditor_devel_REQUIRES="libKF5AkonadiCalendar-devel libKF5AkonadiMime-devel libKF5CalendarCore-devel libKF5CalendarUtils-devel libKF5MailTransportAkonadi-devel libKF5CalendarSupport-devel libKF5EventViews-devel"
+libKF5IncidenceEditor_devel_CONTENTS="
+	usr/include/KF5/[Ii]ncidence[Ee]ditor/
+	usr/include/KF5/incidenceeditor_version.h
+	usr/lib/cmake/KF5IncidenceEditor/
+	usr/lib/libKF5IncidenceEditor.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_IncidenceEditor.pri
+"
